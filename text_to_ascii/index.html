@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="TextToAscii">
+    <head>
+        <meta charset="utf-8">
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+        <title>Text to Ascii</title>
+    </head>
+    <body>
+        <h1>Text to Ascii</h1>
+        <div ng-controller="TextToAsciiController">
+        <div>
+            <div>
+                text: <input type="text" ng-model="text" ng-keyup="displayNum();">
+            </div>
+            <div>
+                ascii value: {{totval}}
+            </div> 
+        </div>
+        </div>
+    </body>
+</html>
