@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="FilterPractice">
+    <head>
+        <title>Filters</title>
+        <meta charset="utf-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <h1>About Filters in Angular</h1>
+        <div ng-controller="FilterController">
+            Cost {{costt | currency : "Rupees ": 3}}
+            <br>
+            {{funco() | another: 'slim' : 'biggo' | uppercase}}
+        </div>
+    </body>
+</html>

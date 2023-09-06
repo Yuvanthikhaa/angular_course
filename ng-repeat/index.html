@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="Shopping_app" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="app.js"></script>
+        <title>ng-repeat</title>
+    </head>
+    <body>
+        <h1>Shopping list view</h1>
+        <div ng-controller="ShoppingListController">
+            <h3>Shopping List</h3>
+            <input type="text" ng-model="search">
+            <ul>
+                <li ng-repeat="item in shoppinglist1 | filter : search">{{item}}</li>
+            </ul>
+            <input type="text" ng-model="shoppinglist2[0].quantity">
+            <ul>
+                <li ng-repeat="item in shoppinglist2">{{$index+1}}. buy {{item.quantity}} {{item.name}}</li>
+            </ul>
+            <input type="text" ng-model="newitem" placeholder="item name">
+            <input type="text" ng-model="newquantity" placeholder="quantity">
+            <button ng-click="addEm()">add to list</button>
+        </div>
+    </body>
+</html>

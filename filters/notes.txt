@@ -1,0 +1,5 @@
+$filter is a function
+can have specific custom arguments
+no need to inject into controller when we're using it directly in html
+extra arguments can be supplied to the filter function(chaining arguments)
+filter functions can also be chained using "|"
